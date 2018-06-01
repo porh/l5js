@@ -21,14 +21,15 @@
         <p id="result"></p>
     </form>
 <script>
-    if(false) {
+    if(true) {
         const a = parseFloat(prompt('Enter A'));
         const b = parseFloat(prompt('Enter B'));
         const c = parseFloat(prompt('Enter C'));
         
         var result = solveQuadraticEq(a, b, c);
-        //alert(result);
-    } else {
+        alert(result);
+    } 
+    if(true) {
     
         function solveQuadraticEq(a, b, c) {
             const d = calcDiskr(a, b, c);
