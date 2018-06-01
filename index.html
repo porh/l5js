@@ -28,9 +28,7 @@
         
         var result = solveQuadraticEq(a, b, c);
         alert(result);
-    } 
-    if(true) {
-    
+        
         function solveQuadraticEq(a, b, c) {
             const d = calcDiskr(a, b, c);
             if (d > 0) {
@@ -47,7 +45,8 @@
         function calcDiskr(a, b, c) {
             return b*b - 4*a*c;
         }
-        
+    } 
+    if(true) {
         document.querySelector("#diskrForm").addEventListener("submit", (evt)=>{
             evt.preventDefault();
             let solveDiscrim = (a,b,c) => {
