@@ -39,9 +39,16 @@
                 return `Коренів серед дійсних чисел немає`;   
             }
         }
-        let a = document.querySelectorAll("#a").value;
-        let b = document.querySelectorAll("#b").value;
-        let c = document.querySelectorAll("#c").value;
-        document.querySelector("#result").innerText = solveDiscrim(a,b,c);
+        
+        if (1) {
+            let args = [];
+            ["a","b","c"].forEach((k)=> args.push(parseFloat(document.querySelector("#"+k).value)));
+            document.querySelector("#result").innerText = solveDiscrim.apply(null, args);
+        } else {
+            let a = parseFloat(document.querySelectorAll("#a").value);
+            let b = parseFloat(document.querySelectorAll("#b").value);
+            let c = parseFloat(document.querySelectorAll("#c").value);
+            document.querySelector("#result").innerText = solveDiscrim(a,b,c);
+        }
     });
 })();
